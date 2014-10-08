@@ -1,0 +1,19 @@
+{
+  "name": "laravel-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lamosty/laravel-test-blog.git"
+  },
+  "author": "Rastislav Lamos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lamosty/laravel-test-blog/issues"
+  },
+  "homepage": "https://github.com/lamosty/laravel-test-blog",
+  "devDependencies": {
+    "gulp": "^3.8.8"
+  }
+}

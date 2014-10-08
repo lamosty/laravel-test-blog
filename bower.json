@@ -1,0 +1,20 @@
+{
+  "name": "laravel-blog",
+  "version": "0.0.0",
+  "homepage": "https://github.com/lamosty/laravel-test-blog",
+  "authors": [
+    "Rastislav Lamos <lamos.rasto@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "compass-mixins": "git://github.com/Igosuki/compass-mixins.git#~1.0.2"
+  }
+}
