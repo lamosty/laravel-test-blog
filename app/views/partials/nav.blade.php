@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Lamosty's Laravel Blog</a>
+      <a class="navbar-brand" href="{{ URL::to('/') }}">Lamosty's Laravel Blog</a>
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse">

@@ -14,3 +14,4 @@
 Route::model('post', 'Post');
 
 Route::get('/', array('uses' => 'BlogController@getIndex'));
+
