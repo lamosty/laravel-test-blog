@@ -21,7 +21,7 @@
             @endif
         </div>
 
-        <div class="form-group @if($errors->has('username')) has-error @endif">
+        <div class="form-group @if($errors->has('password')) has-error @endif">
             {{ Form::label('password', 'Password', array('class' => 'col-sm-3 control-label')) }}
             <div class="col-sm-4">
                 {{ Form::password('password',
@@ -33,7 +33,7 @@
             @endif
         </div>
 
-        <div class="form-group @if($errors->has('username')) has-error @endif">
+        <div class="form-group @if($errors->has('password')) has-error @endif">
             {{ Form::label('password_confirmation', 'Password again',
                 array('class' => 'col-sm-3 control-label')) }}
             <div class="col-sm-4">

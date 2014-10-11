@@ -33,14 +33,19 @@ Route::get('/user/create', array(
     'uses' => 'UserController@getCreate'
 ));
 
+Route::get('/user/login', array(
+    'as' => 'user.login',
+    'uses' => 'UserController@getLogin'
+));
+
 Route::post('/user', array(
     'as' => 'user.post_create',
     'uses' => 'UserController@postIndex'
 ));
 
-Route::get('/user/login', array(
-    'as' => 'user.login',
-    'uses' => 'UserController@getLogin'
+Route::post('/user/login', array(
+    'as' => 'user.post_login',
+    'uses' => 'UserController@postLogin'
 ));
 
 
