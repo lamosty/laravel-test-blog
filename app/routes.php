@@ -28,4 +28,19 @@ Route::get('/archive', array(
     'uses' => 'BlogController@getArchive'
 ));
 
+Route::get('/user/create', array(
+    'as' => 'user.create',
+    'uses' => 'UserController@getCreate'
+));
+
+Route::post('/user', array(
+    'as' => 'user.post_create',
+    'uses' => 'UserController@postIndex'
+));
+
+Route::get('/user/login', array(
+    'as' => 'user.login',
+    'uses' => 'UserController@getLogin'
+));
+
 

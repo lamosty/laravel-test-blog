@@ -14,6 +14,7 @@
       <ul class="nav navbar-nav">
         <li class="{{ navSetActive('home') }}"><a href="{{ URL::route('home') }}">Home</a></li>
         <li class="{{ navSetActive('archive') }}"><a href="{{ URL::route('archive') }}">Archive</a></li>
+        <li class="{{ navSetActive('user.create') }}"><a href="{{ URL::route('user.create') }}">Register Account</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
