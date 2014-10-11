@@ -13,9 +13,19 @@
 
 Route::model('post', 'Post');
 
-Route::get('/', array('uses' => 'BlogController@getIndex'));
+Route::get('/', array(
+    'as' => 'home',
+    'uses' => 'BlogController@getIndex'
+));
+
 Route::get('/posts/{post_slug}', array(
     'as' => 'post',
     'uses' => 'BlogController@getPost'
 ));
+
+Route::get('/archive', array(
+    'as' => 'archive',
+    'uses' => 'BlogController@getArchive'
+));
+
 

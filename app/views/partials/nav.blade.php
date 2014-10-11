@@ -7,13 +7,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ URL::to('/') }}">Lamosty's Laravel Blog</a>
+      <a class="navbar-brand" href="{{ URL::route('home') }}">Lamosty's Laravel Blog</a>
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li class="{{ navSetActive('home') }}"><a href="{{ URL::route('home') }}">Home</a></li>
+        <li class="{{ navSetActive('archive') }}"><a href="{{ URL::route('archive') }}">Archive</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
