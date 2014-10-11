@@ -14,4 +14,8 @@
 Route::model('post', 'Post');
 
 Route::get('/', array('uses' => 'BlogController@getIndex'));
+Route::get('/posts/{post_slug}', array(
+    'as' => 'post',
+    'uses' => 'BlogController@getPost'
+));
 

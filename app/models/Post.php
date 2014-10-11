@@ -12,4 +12,8 @@ class Post extends Eloquent {
     public function createdAtFormatted() {
         return $this->created_at->format('F d, Y');
     }
+
+    public function comments() {
+        return $this->hasMany('Comment');
+    }
 }
