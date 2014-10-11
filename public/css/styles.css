@@ -21,3 +21,12 @@
   width: 15%;
   min-width: 113px;
   margin-top: 15px; }
+
+.blog-post .comments {
+  margin-top: 20px; }
+
+.blog-post .comment {
+  margin-bottom: 20px; }
+
+.blog-post .comment-content {
+  margin: 8px; }

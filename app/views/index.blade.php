@@ -18,4 +18,9 @@
 
     @endforeach
 
+    <ul class="pager">
+        <li class="previous disabled"><a href="#">&larr; Previous</a></li>
+        <li class="next"><a href="#">Next &rarr;</a></li>
+    </ul>
+
 @stop

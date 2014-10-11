@@ -16,16 +16,21 @@
         {{{ \Illuminate\Support\Pluralizer::plural('Comment', $comments->count()) }}}
     </h4>
 
+    @if ($comments->count())
+    <div class="comments">
     @foreach ($comments as $comment)
         <div class="comment">
             <div class="comment-heading">
                 <strong>{{{ $comment->author->username }}}</strong> - {{{ $comment->createdAtFormatted() }}}
             </div>
             <div class="comment-content">
-                {{{ $comment->content() }}}
+                {{ $comment->content() }}
             </div>
         </div>
     @endforeach
+    </div>
+    @endif
+    <hr/>
 
 </div><!-- /.blog-post -->
 
