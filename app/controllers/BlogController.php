@@ -11,7 +11,7 @@ class BlogController extends BaseController {
 
 	public function getIndex()
 	{
-        $posts = $this->post->orderBy('created_at', 'DESC');
+        $posts = $this->post->orderBy('created_at', 'DESC')->paginate(10);
 
         return View::make('index', array('posts' => $posts));
 	}

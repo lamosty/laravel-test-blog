@@ -2,22 +2,17 @@
 
 @section('main-content')
 
-<div class="blog-post">
-    <h2 class="blog-post-title">Sample blog post</h2>
-    <p class="blog-post-meta">January 1, 2014 by Mark</p>
+    @foreach ($posts as $post)
+    <div class="blog-post">
+        <h2 class="blog-post-title">{{ $post->post_title }}</h2>
+        <p class="blog-post-meta">{{{ $post->createdAtFormatted() }}} by Mark</p>
 
-    <p>Post excerpt here.</p>
+        {{ $post->post_excerpt }}
 
-    <a href="#" class="read-more-link">Read More...</a>
-</div><!-- /.blog-post -->
 
-<div class="blog-post">
-    <h2 class="blog-post-title">Sample blog post</h2>
-    <p class="blog-post-meta">January 1, 2014 by Mark</p>
+        <a href="" class="btn btn-primary btn-sm read-more-btn" role="button">Read More...</a>
+    </div><!-- /.blog-post -->
 
-    <p>Post excerpt here.</p>
-
-    <a href="#" class="read-more-link">Read More...</a>
-</div><!-- /.blog-post -->
+    @endforeach
 
 @stop

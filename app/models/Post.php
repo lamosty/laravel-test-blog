@@ -8,11 +8,8 @@ class Post extends Eloquent {
         return $this->belongsTo('User', 'user_id');
     }
 
-    private function formatDate($date) {
-        return $date;
-    }
 
     public function createdAtFormatted() {
-        return $this->formatDate($this->created_at);
+        return $this->created_at->format('F d, Y');
     }
 }

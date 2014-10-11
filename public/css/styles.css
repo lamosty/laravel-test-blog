@@ -10,5 +10,14 @@
  * A partial implementation of the Ruby display functions from Compass:
  * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
  */
+/**
+  * Colors
+**/
 .blog-sidebar .avatar {
   max-width: 100%; }
+
+.blog-post .read-more-btn {
+  display: block;
+  width: 15%;
+  min-width: 113px;
+  margin-top: 15px; }
