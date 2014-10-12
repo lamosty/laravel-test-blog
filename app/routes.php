@@ -11,19 +11,18 @@
 |
 */
 
-Route::model('post', 'Post');
-
 Route::get('/', array(
     'as' => 'blog.home',
     'uses' => 'BlogController@getIndex'
 ));
 
-Route::get('/posts/{post_slug}', array(
+Route::get('/posts/{post}', array(
     'as' => 'blog.post',
     'uses' => 'BlogController@getPost'
 ));
 
 Route::get('/post/create', array(
+    'before' => 'auth.custom',
     'as' => 'blog.new_post',
     'uses' => 'BlogController@getNewPost'
 ));
@@ -31,6 +30,11 @@ Route::get('/post/create', array(
 Route::post('/post', array(
     'as' => 'blog.post_new_post',
     'uses' => 'BlogController@postNewPost'
+));
+
+Route::post('/posts/{post}/new_comment', array(
+    'as' => 'blog.post_new_comment',
+    'uses' => 'BlogController@postNewComment'
 ));
 
 Route::get('/archive', array(

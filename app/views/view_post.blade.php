@@ -30,6 +30,15 @@
     @endforeach
     </div>
     @endif
+
+    @if (Auth::check())
+    @include('partials.comment-form')
+    @else
+    <p>
+        <a href="{{ URL::route('user.login') }}">Login</a> or
+        <a href="{{ URL::route('user.create') }}">register</a> in order to be able to comment.
+    </p>
+    @endif
     <hr/>
 
 </div><!-- /.blog-post -->

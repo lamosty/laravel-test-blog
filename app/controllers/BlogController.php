@@ -2,23 +2,14 @@
 
 class BlogController extends BaseController {
 
-    protected $post;
-
-    public function __construct(Post $post) {
-        $this->post = $post;
-
-    }
-
 	public function getIndex()
 	{
-        $posts = $this->post->orderBy('created_at', 'DESC')->paginate(10);
+        $posts = Post::orderBy('created_at', 'DESC')->paginate(10);
 
         return View::make('index', array('posts' => $posts));
 	}
 
-    public function getPost($post_slug) {
-        $post = $this->post->where('post_slug', '=', $post_slug)->first();
-
+    public function getPost($post) {
         if (is_null($post)) {
             return App::abort(404);
         }
@@ -51,15 +42,39 @@ class BlogController extends BaseController {
                 ->withErrors($validator);
         }
 
-        $this->post = new Post;
-        $this->post->fill(Input::all());
-        $this->post->author()->associate(Auth::user());
+        $post = new Post;
+        $post->fill(Input::all());
+        $post->author()->associate(Auth::user());
 
-        $this->post->save();
+        $post->save();
 
-        if ($this->post->id) {
-            return Redirect::route('blog.post', array("post_slug" => $this->post->post_slug))
-                ->with('success', 'Your account has been created. You can login now.');
+        if ($post->id) {
+            return Redirect::route('blog.post', array("post_slug" => $post->post_slug));
+        }
+    }
+
+    public function postNewComment($post) {
+        $validationRules = array(
+            "content" => 'required|min:3'
+        );
+
+        $validator = Validator::make(Input::all(), $validationRules);
+
+        if ($validator->fails()) {
+            return Redirect::route('blog.post', array("post_slug" => $post->post_slug))
+                ->withInput(Input::all())
+                ->withErrors($validator);
+        }
+
+        $comment = new Comment;
+        $comment->fill(Input::all());
+        $comment->author()->associate(Auth::user());
+        $comment->post()->associate($post);
+
+        $comment->save();
+
+        if ($comment->id) {
+            return Redirect::route('blog.post', array("post_slug" => $post->post_slug));
         }
     }
 }

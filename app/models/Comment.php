@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\URL;
 
 class Comment extends Eloquent {
 
+    protected $fillable = array('content');
+
     public function author() {
         return $this->belongsTo('User', 'user_id');
     }

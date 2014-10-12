@@ -88,3 +88,9 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+Route::filter('auth.custom', function($route, $request) {
+    if (Auth::guest()) {
+        return Redirect::to('/');
+    }
+});
