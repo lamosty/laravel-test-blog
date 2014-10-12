@@ -14,7 +14,6 @@
       <ul class="nav navbar-nav">
         <li class="{{ navSetActive('home') }}"><a href="{{ URL::route('home') }}">Home</a></li>
         <li class="{{ navSetActive('archive') }}"><a href="{{ URL::route('archive') }}">Archive</a></li>
-        <li class="{{ navSetActive('user.create') }}"><a href="{{ URL::route('user.create') }}">Register Account</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
@@ -24,6 +23,20 @@
             <span class="glyphicon glyphicon-search"></span>
         </button>
       </form>
+      <ul class="nav navbar-nav navbar-right">
+        @if(Auth::check())
+        <li class="{{ navSetActive('user.logout') }}">
+            <a href="{{ URL::route('user.logout') }}">Logout</a>
+        </li>
+        @else
+        <li class="{{ navSetActive('user.create') }}">
+            <a href="{{ URL::route('user.create') }}">Register</a>
+        </li>
+        <li class="{{ navSetActive('user.login') }}">
+            <a href="{{ URL::route('user.login') }}">Login</a>
+        </li>
+        @endif
+      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

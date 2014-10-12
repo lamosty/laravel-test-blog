@@ -21,6 +21,24 @@ class UserController extends BaseController {
         return View::make('user/login');
     }
 
+    public function getLogout() {
+        Auth::logout();
+
+        return Redirect::route('home');
+    }
+
+    public function postLogin() {
+        $username = Input::get('username');
+        $password = Input::get('password');
+
+        if (Auth::attempt(array(
+            "username" => $username,
+            "password" => $password))
+        ) {
+            return Redirect::to('/');
+        }
+    }
+
     public function postIndex() {
         $validationRules = array(
             'username' => 'required|min:3|unique:users,username',

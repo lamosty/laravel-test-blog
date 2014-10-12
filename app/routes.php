@@ -38,6 +38,11 @@ Route::get('/user/login', array(
     'uses' => 'UserController@getLogin'
 ));
 
+Route::get('/user/logout', array(
+    'as' => 'user.logout',
+    'uses' => 'UserController@getLogout'
+));
+
 Route::post('/user', array(
     'as' => 'user.post_create',
     'uses' => 'UserController@postIndex'
