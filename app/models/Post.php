@@ -4,6 +4,13 @@ use Illuminate\Support\Facades\URL;
 
 class Post extends Eloquent {
 
+    protected $fillable = array(
+        'post_title',
+        'post_excerpt',
+        'post_content',
+        'post_slug'
+    );
+
     public function author() {
         return $this->belongsTo('User', 'user_id');
     }

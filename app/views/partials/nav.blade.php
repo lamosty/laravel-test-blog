@@ -7,13 +7,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ URL::route('home') }}">Lamosty's Laravel Blog</a>
+      <a class="navbar-brand" href="{{ URL::route('blog.home') }}">Lamosty's Laravel Blog</a>
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="{{ navSetActive('home') }}"><a href="{{ URL::route('home') }}">Home</a></li>
-        <li class="{{ navSetActive('archive') }}"><a href="{{ URL::route('archive') }}">Archive</a></li>
+        <li class="{{ navSetActive('blog.home') }}"><a href="{{ URL::route('blog.home') }}">Home</a></li>
+        <li class="{{ navSetActive('blog.archive') }}"><a href="{{ URL::route('blog.archive') }}">Archive</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
@@ -25,6 +25,9 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         @if(Auth::check())
+        <li class="{{ navSetActive('blog.new_post') }}">
+            <a href="{{ URL::route('blog.new_post') }}">New Post</a>
+        </li>
         <li class="{{ navSetActive('user.logout') }}">
             <a href="{{ URL::route('user.logout') }}">Logout</a>
         </li>

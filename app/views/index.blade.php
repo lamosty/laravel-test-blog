@@ -12,7 +12,7 @@
         {{ $post->post_excerpt }}
 
 
-        <a href="{{{ URL::route('post', $post->post_slug) }}}"
+        <a href="{{{ URL::route('blog.post', $post->post_slug) }}}"
             class="btn btn-primary btn-sm read-more-btn" role="button">Read More...</a>
     </div><!-- /.blog-post -->
 

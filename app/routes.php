@@ -14,17 +14,27 @@
 Route::model('post', 'Post');
 
 Route::get('/', array(
-    'as' => 'home',
+    'as' => 'blog.home',
     'uses' => 'BlogController@getIndex'
 ));
 
 Route::get('/posts/{post_slug}', array(
-    'as' => 'post',
+    'as' => 'blog.post',
     'uses' => 'BlogController@getPost'
 ));
 
+Route::get('/post/create', array(
+    'as' => 'blog.new_post',
+    'uses' => 'BlogController@getNewPost'
+));
+
+Route::post('/post', array(
+    'as' => 'blog.post_new_post',
+    'uses' => 'BlogController@postNewPost'
+));
+
 Route::get('/archive', array(
-    'as' => 'archive',
+    'as' => 'blog.archive',
     'uses' => 'BlogController@getArchive'
 ));
 

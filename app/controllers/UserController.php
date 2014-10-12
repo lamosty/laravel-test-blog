@@ -15,7 +15,7 @@ class UserController extends BaseController {
     public function getLogin() {
         $user = Auth::user();
         if (!empty($user->id)) {
-            return Redirect::route('home');
+            return Redirect::route('blog.home');
         }
 
         return View::make('user/login');
@@ -24,7 +24,7 @@ class UserController extends BaseController {
     public function getLogout() {
         Auth::logout();
 
-        return Redirect::route('home');
+        return Redirect::route('blog.home');
     }
 
     public function postLogin() {
