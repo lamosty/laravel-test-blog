@@ -90,7 +90,8 @@ Route::filter('csrf', function()
 });
 
 Route::filter('auth.custom', function($route, $request) {
+
     if (Auth::guest()) {
-        return Redirect::to('/');
+        return Redirect::route('blog.home');
     }
 });

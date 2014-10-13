@@ -9,7 +9,11 @@ class UserController extends BaseController {
     }
 
     public function getCreate() {
-        return View::make('user/create');
+        $params = array(
+            'from' => URL::previous()
+        );
+
+        return View::make('user/create', $params);
     }
 
     public function getLogin() {
@@ -18,13 +22,21 @@ class UserController extends BaseController {
             return Redirect::route('blog.home');
         }
 
-        return View::make('user/login');
+        $params = array(
+            'from' => URL::previous()
+        );
+
+        if (Input::has('from')) {
+            $params["from"] = Input::get('from');
+        }
+
+        return View::make('user/login', $params);
     }
 
     public function getLogout() {
         Auth::logout();
 
-        return Redirect::route('blog.home');
+        return Redirect::to(URL::previous());
     }
 
     public function postLogin() {
@@ -35,6 +47,10 @@ class UserController extends BaseController {
             "username" => $username,
             "password" => $password))
         ) {
+            if (Input::has('from')) {
+                return Redirect::to(Input::get('from'));
+            }
+
             return Redirect::to('/');
         }
     }
@@ -59,7 +75,7 @@ class UserController extends BaseController {
         $this->user->save();
 
         if ($this->user->id) {
-            return Redirect::route('user.login')
+            return Redirect::route('user.login', array('from' => Input::get('from')))
                 ->with('success', 'Your account has been created. You can login now.');
         }
     }

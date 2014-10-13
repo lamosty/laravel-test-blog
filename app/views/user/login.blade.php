@@ -8,6 +8,10 @@
     <div class="panel-body">
      {{ Form::open(array('route' => 'user.post_login', 'role' => 'form', 'class' => 'form-horizontal')) }}
 
+        @if (!empty($from))
+        {{ Form::hidden('from', $from) }}
+        @endif
+
          <div class="form-group">
              {{ Form::label('username', 'Username', array('class' => 'col-sm-3 control-label')) }}
              <div class="col-sm-4">

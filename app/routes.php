@@ -33,6 +33,7 @@ Route::post('/post', array(
 ));
 
 Route::post('/posts/{post}/new_comment', array(
+    'before' => 'auth.custom',
     'as' => 'blog.post_new_comment',
     'uses' => 'BlogController@postNewComment'
 ));
@@ -43,6 +44,7 @@ Route::get('/archive', array(
 ));
 
 Route::get('/user/create', array(
+    'before' => 'guest',
     'as' => 'user.create',
     'uses' => 'UserController@getCreate'
 ));
