@@ -23,4 +23,9 @@ class Post extends Eloquent {
     public function comments() {
         return $this->hasMany('Comment');
     }
+
+    public function getCreatedAtMonthYear() {
+        return $this->created_at->format('F Y');
+
+    }
 }

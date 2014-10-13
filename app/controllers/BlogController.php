@@ -77,4 +77,10 @@ class BlogController extends BaseController {
             return Redirect::route('blog.post', array("post_slug" => $post->post_slug));
         }
     }
+
+    public function getArchive() {
+        $posts = Post::orderBy('created_at', 'DESC')->get();
+
+        return View::make('archive', array('posts' => $posts));
+    }
 }
