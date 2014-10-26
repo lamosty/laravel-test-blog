@@ -13,6 +13,15 @@
 /**
   * Colors
 **/
+html, body {
+  height: 100%; }
+
+.wrapper {
+  min-height: 100%; }
+
+#blog-main {
+  padding-bottom: 100px; }
+
 .blog-sidebar .avatar {
   max-width: 100%; }
 
@@ -30,3 +39,10 @@
 
 .blog-post .comment-content {
   margin: 8px; }
+
+#footer {
+  background-color: #f8f8f8;
+  margin-top: -70px;
+  border-top: 1px solid #e7e7e7;
+  padding: 10px 0;
+  height: 70px; }

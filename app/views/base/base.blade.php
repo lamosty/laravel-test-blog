@@ -17,21 +17,23 @@
 </head>
 
 <body>
-    <header>
-        @include('partials.nav')
-    </header>
+    <div class="wrapper">
+        <header>
+            @include('partials.nav')
+        </header>
 
-    <div class="container">
-        <div class="row">
-            <main class="col-sm-8 blog-main">
-                @yield('main-content')
-            </main><!-- /.blog-main -->
+        <div class="container" id="blog-main">
+            <div class="row">
+                <main class="col-sm-8">
+                    @yield('main-content')
+                </main><!-- /.blog-main -->
 
-            <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
-                @include('partials.sidebar')
-            </aside><!-- /.blog-sidebar -->
-        </div><!-- /.row -->
-    </div><!-- /.container -->
+                <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    @include('partials.sidebar')
+                </aside><!-- /.blog-sidebar -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div>
 
     @include('partials.footer')
 
