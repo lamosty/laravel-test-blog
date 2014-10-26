@@ -1,16 +1,19 @@
     @foreach ($posts as $post)
-    <div class="blog-post">
-        <h2 class="blog-post-title">{{ $post->post_title }}</h2>
-        <p class="blog-post-meta">{{{ $post->createdAtFormatted() }}}
-            by {{{ $post->author->username }}}
+    <article class="blog-post">
+        <header>
+            <h2 class="blog-post-title">{{ $post->post_title }}</h2>
+            <p class="blog-post-meta">{{{ $post->createdAtFormatted() }}}
+                by {{{ $post->author->username }}}
+            </p>
+        </header>
+
+        <p class="excerpt">
+            {{ $post->post_excerpt }}
         </p>
-
-        {{ $post->post_excerpt }}
-
 
         <a href="{{{ URL::route('blog.post', $post->post_slug) }}}"
             class="btn btn-primary btn-sm read-more-btn" role="button">Read More...</a>
-    </div><!-- /.blog-post -->
+    </article><!-- /.blog-post -->
 
     @endforeach
 
