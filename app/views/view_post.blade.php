@@ -1,12 +1,18 @@
 @extends('base.base')
 
-@section('main-content')
+@section('head.title')
+    {{ $post->post_title }}
+@stop
 
-<div class="blog-post">
-    <h2 class="blog-post-title">{{ $post->post_title }}</h2>
-    <p class="blog-post-meta">{{{ $post->createdAtFormatted() }}}
-        by {{{ $post->author->username }}}
-    </p>
+@section('main-content')
+<article class="blog-post">
+    <header class="page-header">
+        <h1>{{ $post->post_title }}</h1>
+        <p class="blog-post-meta">{{{ $post->createdAtFormatted() }}}
+            by {{{ $post->author->username }}}
+        </p>
+    </header>
+
 
     {{ $post->post_content }}
 
@@ -17,18 +23,18 @@
     </h4>
 
     @if ($comments->count())
-    <div class="comments">
+    <section class="comments">
     @foreach ($comments as $comment)
-        <div class="comment">
+        <article class="comment">
             <div class="comment-heading">
                 <strong>{{{ $comment->author->username }}}</strong> - {{{ $comment->createdAtFormatted() }}}
             </div>
             <div class="comment-content">
                 {{ $comment->content() }}
             </div>
-        </div>
+        </article>
     @endforeach
-    </div>
+    </section>
     @endif
 
     @if (Auth::check())
@@ -39,8 +45,5 @@
         <a href="{{ URL::route('user.create') }}">register</a> in order to be able to comment.
     </p>
     @endif
-    <hr/>
-
-</div><!-- /.blog-post -->
-
+</article><!-- /.blog-post -->
 @stop

@@ -1,5 +1,17 @@
 @import 'base';
 
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+#blog-main {
+  padding-bottom: 100px;
+}
+
 .navbar {
   .navbar-brand {
 
@@ -31,5 +43,13 @@
   .comment-content {
     margin: 8px;
   }
+}
+
+#footer {
+  background-color: $nav-bg-gray;
+  margin-top: -70px;
+  border-top: 1px solid $nav-border-gray;
+  padding: 10px 0;
+  height: 70px;
 }
 
