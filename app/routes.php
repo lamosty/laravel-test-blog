@@ -43,6 +43,11 @@ Route::get('/archive', array(
     'uses' => 'BlogController@getArchive'
 ));
 
+Route::get('/search', array(
+    'as' => 'blog.get_new_search',
+    'uses' => 'BlogController@getNewSearch'
+));
+
 Route::get('/user/create', array(
     'before' => 'guest',
     'as' => 'user.create',

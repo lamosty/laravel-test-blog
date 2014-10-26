@@ -21,19 +21,11 @@
 
     <div class="container">
 
-      <div class="blog-header">
-        <h1 class="blog-title">Lamosty's Blog</h1>
-        <p class="lead blog-description">The most awesome technical blog around.</p>
-      </div>
-
       <div class="row">
-
 
         <div class="col-sm-8 blog-main">
 
             @yield('main-content')
-
-
 
         </div><!-- /.blog-main -->
 

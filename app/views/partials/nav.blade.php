@@ -15,14 +15,15 @@
         <li class="{{ navSetActive('blog.home') }}"><a href="{{ URL::route('blog.home') }}">Home</a></li>
         <li class="{{ navSetActive('blog.archive') }}"><a href="{{ URL::route('blog.archive') }}">Archive</a></li>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
+      {{ Form::open(array('route' => 'blog.get_new_search', 'role' => 'search',
+                          'class' => 'navbar-form navbar-right', 'method' => 'get')) }}
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+            {{ Form::text('search-term', null, array('class' => 'form-control', 'placeholder' => 'Search')) }}
         </div>
         <button type="submit" class="btn btn-default">
             <span class="glyphicon glyphicon-search"></span>
         </button>
-      </form>
+        {{ Form::close() }}
       <ul class="nav navbar-nav navbar-right">
         @if(Auth::check())
         <li class="{{ navSetActive('blog.new_post') }}">

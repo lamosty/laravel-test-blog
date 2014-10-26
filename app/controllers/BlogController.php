@@ -83,4 +83,18 @@ class BlogController extends BaseController {
 
         return View::make('archive', array('posts' => $posts));
     }
+
+    public function getNewSearch() {
+        $searchTerm = Input::get('search-term');
+        $posts = Post::where('post_title', 'LIKE', '%' . $searchTerm . '%')
+            ->where('post_content', 'LIKE', '%' . $searchTerm . '%', 'OR')
+            ->where('post_excerpt', 'LIKE', '%' . $searchTerm . '%', 'OR')
+            ->get();
+
+        return View::make('search-results', array(
+            'posts' => $posts,
+            'searchTerm' => $searchTerm
+        ));
+
+    }
 }
