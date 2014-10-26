@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Blog Template for Bootstrap</title>
+    <title>
+        @section('head.title')
+        @show
+        | Lamosty's Laravel Blog
+    </title>
 
     <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/styles.css')}}" rel="stylesheet">

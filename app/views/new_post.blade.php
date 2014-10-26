@@ -1,5 +1,9 @@
 @extends('base.base')
 
+@section('head.title')
+    Create a New Post
+@stop
+
 @section('main-content')
 <div class="panel panel-default">
     <div class="panel-heading">

@@ -1,5 +1,9 @@
 @extends('base.base')
 
+@section('head.title')
+    {{ $post->post_title }}
+@stop
+
 @section('main-content')
 <article class="blog-post">
     <header class="page-header">

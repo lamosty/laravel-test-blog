@@ -1,5 +1,9 @@
 @extends('base.base')
 
+@section('head.title')
+    Posts Archive
+@stop
+
 @section('main-content')
 
     <div class="page-header">
