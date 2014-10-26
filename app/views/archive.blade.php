@@ -2,6 +2,10 @@
 
 @section('main-content')
 
+    <div class="page-header">
+        <h1>Posts archive</h1>
+    </div>
+
     <?php $lastMonth = $posts[0]->getCreatedAtMonthYear(); ?>
 
     <ul class="archive-list">
@@ -17,9 +21,11 @@
                 </li>
                 <li>{{ $lastMonth }}
                     <ul class="archive-list-month">
-                @else
-                    <li>{{ $post->post_title }}</li>
                 @endif
+
+                <li>
+                    <a href="{{ URL::route('blog.post', $post->post_slug) }}">{{ $post->post_title }}</a>
+                </li>
 
             @endforeach
         </li>

@@ -89,6 +89,7 @@ class BlogController extends BaseController {
         $posts = Post::where('post_title', 'LIKE', '%' . $searchTerm . '%')
             ->where('post_content', 'LIKE', '%' . $searchTerm . '%', 'OR')
             ->where('post_excerpt', 'LIKE', '%' . $searchTerm . '%', 'OR')
+            ->orderBy('created_at', 'DESC')
             ->get();
 
         return View::make('search-results', array(
