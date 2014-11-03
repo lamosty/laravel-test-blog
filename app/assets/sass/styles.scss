@@ -59,6 +59,12 @@ html, body {
   }
 }
 
+.blog-sidebar {
+  .sidebar-block {
+    margin: 20px 0;
+  }
+}
+
 #footer {
   background-color: $nav-bg-gray;
   margin-top: -70px;
