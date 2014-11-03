@@ -25,6 +25,22 @@ html, body {
 .blog-sidebar .avatar {
   max-width: 100%; }
 
+.blog-post .blog-post-title a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  color: #333; }
+
+.blog-post .blog-post-title a:active, .blog-post .blog-post-title a:focus {
+  outline: none; }
+
+.blog-post .blog-post-title a:hover {
+  color: #747474; }
+
+.blog-post img.alignnone {
+  display: block;
+  margin: 20px auto; }
+
 .blog-post .read-more-btn {
   display: block;
   width: 15%;

@@ -25,6 +25,20 @@ html, body {
 }
 
 .blog-post {
+  .blog-post-title {
+    a {
+      @include unstyled-link;
+      @include link-colors($title-link, $title-link-hover);
+    }
+
+  }
+
+  img.alignnone {
+    display: block;
+    margin: 20px auto;
+  }
+
+
   .read-more-btn {
     display: block;
     width: 15%;
