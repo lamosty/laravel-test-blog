@@ -11,9 +11,9 @@
             </p>
         </header>
 
-        <p class="excerpt">
+        <div class="excerpt">
             {{ $post->post_excerpt }}
-        </p>
+        </div>
 
         <a href="{{{ URL::route('blog.post', $post->post_slug) }}}">Read More...</a>
     </article><!-- /.blog-post -->

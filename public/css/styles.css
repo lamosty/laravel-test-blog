@@ -1,67 +1,15 @@
-/*
- * A partial implementation of the Ruby list functions from Compass:
- * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/lists.rb
- */
-/*
- * A partial implementation of the Ruby constants functions from Compass:
- * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/constants.rb
- */
-/*
- * A partial implementation of the Ruby display functions from Compass:
- * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
- */
-/**
-  * Colors
-**/
-html, body {
-  height: 100%; }
-
-.wrapper {
-  min-height: 100%; }
-
-#blog-main {
-  padding-bottom: 100px; }
-
-.blog-sidebar .avatar {
-  max-width: 100%; }
-
-.blog-post .blog-post-title a {
-  color: inherit;
-  text-decoration: inherit;
-  cursor: inherit;
-  color: #333; }
-
-.blog-post .blog-post-title a:active, .blog-post .blog-post-title a:focus {
-  outline: none; }
-
-.blog-post .blog-post-title a:hover {
-  color: #747474; }
-
-.blog-post img.alignnone {
-  display: block;
-  margin: 20px auto; }
-
-.blog-post .read-more-btn {
-  display: block;
-  width: 15%;
-  min-width: 113px;
-  margin-top: 15px; }
-
-.blog-post .comments {
-  margin-top: 20px; }
-
-.blog-post .comment {
-  margin-bottom: 20px; }
-
-.blog-post .comment-content {
-  margin: 8px; }
-
-.blog-sidebar .sidebar-block {
-  margin: 20px 0; }
-
-#footer {
-  background-color: #f8f8f8;
-  margin-top: -70px;
-  border-top: 1px solid #e7e7e7;
-  padding: 10px 0;
-  height: 70px; }
+body,html{height:100%}
+.wrapper{min-height:100%}
+#blog-main{padding-bottom:100px}
+.blog-sidebar .avatar{max-width:100%}
+.blog-post .blog-post-title a{text-decoration:inherit;cursor:inherit;color:#333}
+.blog-post .blog-post-title a:active,.blog-post .blog-post-title a:focus{outline:0}
+.blog-post .blog-post-title a:hover{color:#747474}
+.blog-post .excerpt{margin-bottom:10px}
+.blog-post img.alignnone{display:block;margin:20px auto}
+.blog-post .read-more-btn{display:block;width:15%;min-width:113px;margin-top:15px}
+.blog-post .comments{margin-top:20px}
+.blog-post .comment{margin-bottom:20px}
+.blog-post .comment-content{margin:8px}
+.blog-sidebar .sidebar-block{margin:20px 0}
+#footer{background-color:#f8f8f8;margin-top:-70px;border-top:1px solid #e7e7e7;padding:10px 0;height:70px}

@@ -1,5 +1,6 @@
 <a href="{{ URL::to('/') }}">
-    <img src="{{asset('images/lamosty.jpg')}}" class="img-rounded avatar">
+    <img src="{{asset('images/lamosty.jpg')}}" class="img-rounded avatar"
+        alt="Lamosty's photo">
 </a>
 <div class="sidebar-block">
     <h4>About Me</h4>
