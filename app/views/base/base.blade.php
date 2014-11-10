@@ -32,7 +32,7 @@
                     @yield('main-content')
                 </main><!-- /.blog-main -->
 
-                <aside class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                <aside id="sidebar" class="col-sm-3 col-sm-offset-1 blog-sidebar">
                     @include('partials.sidebar')
                 </aside><!-- /.blog-sidebar -->
             </div><!-- /.row -->

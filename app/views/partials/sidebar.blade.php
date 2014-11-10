@@ -1,9 +1,9 @@
-<a href="{{ URL::to('/') }}">
-    <img src="{{asset('images/lamosty.jpg')}}" class="img-rounded avatar"
-        alt="Lamosty's photo">
-</a>
-<div class="sidebar-block">
-    <h4>About Me</h4>
+<div class="sidebar-block identity">
+    <a href="{{ URL::to('/') }}" class="image-wrapper">
+        <img src="{{asset('images/lamosty.jpg')}}" class="img-rounded avatar"
+            alt="Lamosty's photo" width="200">
+    </a>
+    <h5>Rastislav Lamos</h5>
     <p>I strive to make the internet more friendly by using the best technology and practices, while building front-end of web-applications for the future.</p>
 </div>
 
