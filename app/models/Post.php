@@ -28,4 +28,8 @@ class Post extends Eloquent {
         return $this->created_at->format('F Y');
 
     }
+
+    public function getCreatedAtYear() {
+        return $this->created_at->format('Y');
+    }
 }

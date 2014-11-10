@@ -13,11 +13,12 @@
             <ul class="nav navbar-nav">
                 <li class="{{ navSetActive('blog.home') }}"><a href="{{ URL::route('blog.home') }}">Home</a></li>
                 <li class="{{ navSetActive('blog.archive') }}"><a href="{{ URL::route('blog.archive') }}">Archive</a></li>
+                <li class="jump-to-author"><a href="#sidebar">About the Author</a></li>
             </ul>
             {{ Form::open(array('route' => 'blog.get_new_search', 'role' => 'search',
-                                'class' => 'navbar-form navbar-right', 'method' => 'get')) }}
+                                'class' => 'navbar-form navbar-right search-form', 'method' => 'get')) }}
             <div class="form-group">
-                {{ Form::text('search-term', null, array('class' => 'form-control', 'placeholder' => 'Search')) }}
+                {{ Form::text('search-term', null, array('class' => 'form-control search-input', 'placeholder' => 'Search')) }}
             </div>
             <button type="submit" class="btn btn-default">
             <span class="glyphicon glyphicon-search"></span>

@@ -1,48 +1,24 @@
-/*
- * A partial implementation of the Ruby list functions from Compass:
- * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/lists.rb
- */
-/*
- * A partial implementation of the Ruby constants functions from Compass:
- * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/constants.rb
- */
-/*
- * A partial implementation of the Ruby display functions from Compass:
- * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
- */
-/**
-  * Colors
-**/
-html, body {
-  height: 100%; }
-
-.wrapper {
-  min-height: 100%; }
-
-#blog-main {
-  padding-bottom: 100px; }
-
-.blog-sidebar .avatar {
-  max-width: 100%; }
-
-.blog-post .read-more-btn {
-  display: block;
-  width: 15%;
-  min-width: 113px;
-  margin-top: 15px; }
-
-.blog-post .comments {
-  margin-top: 20px; }
-
-.blog-post .comment {
-  margin-bottom: 20px; }
-
-.blog-post .comment-content {
-  margin: 8px; }
-
-#footer {
-  background-color: #f8f8f8;
-  margin-top: -70px;
-  border-top: 1px solid #e7e7e7;
-  padding: 10px 0;
-  height: 70px; }
+body,html{height:100%}
+.wrapper{min-height:100%}
+#blog-main{padding-bottom:100px}
+.navbar .jump-to-author{display:none}
+@media (min-width:768px) and (max-width:992px){.navbar .search-form{position:relative}
+.navbar .search-form .form-group{display:block;vertical-align:baseline}
+.navbar .search-form .form-group input.search-input{position:absolute;top:0;left:-166px;z-index:100;display:none}
+.navbar .search-form:hover input.search-input{display:block}}
+@media (max-width:767px){.navbar .search-form .btn-default{width:100%}
+.navbar .jump-to-author{display:block}}
+.blog-post .blog-post-title a{text-decoration:inherit;cursor:inherit;color:#333}
+.blog-post .blog-post-title a:active,.blog-post .blog-post-title a:focus{outline:0}
+.blog-post .blog-post-title a:hover{color:#747474}
+.blog-post .excerpt{margin-bottom:10px}
+.blog-post img.alignnone{display:block;margin:20px auto}
+.blog-post .read-more-btn{display:block;width:15%;min-width:113px;margin-top:15px}
+.blog-post .comments{margin-top:20px}
+.blog-post .comment{margin-bottom:20px}
+.blog-post .comment-content{margin:8px}
+.blog-sidebar .sidebar-block{margin:20px 0}
+.blog-sidebar .sidebar-block .image-wrapper{display:block;text-align:center}
+.blog-sidebar .sidebar-block.identity h5{text-align:center;margin:20px 0}
+@media (max-width:767px){.blog-sidebar{padding:30px;margin-top:50px;background-color:#f8f8f8;border-top:1px solid #e7e7e7}}
+#footer{background-color:#f8f8f8;margin-top:-70px;border-top:1px solid #e7e7e7;padding:10px 0;height:70px}
