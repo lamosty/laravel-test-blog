@@ -4,7 +4,7 @@ class BlogController extends BaseController {
 
 	public function getIndex()
 	{
-        $posts = Post::orderBy('created_at', 'DESC')->paginate(10);
+        $posts = Post::orderBy('created_at', 'DESC')->paginate(5);
 
         return View::make('index', array('posts' => $posts));
 	}
@@ -16,9 +16,14 @@ class BlogController extends BaseController {
 
         $comments = $post->comments()->orderBy('created_at', 'ASC')->get();
 
+        $nextPost = Post::where('created_at', '>', $post->created_at)->first();
+        $previousPost = Post::where('created_at', '<', $post->created_at)->orderBy('created_at', 'DESC')->first();
+
         return View::make('view_post', array(
             "post" => $post,
-            "comments" => $comments
+            "comments" => $comments,
+            "previousPost" => $previousPost,
+            "nextPost" => $nextPost
         ));
     }
 

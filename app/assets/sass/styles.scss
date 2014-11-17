@@ -10,6 +10,10 @@ html, body {
 
 #blog-main {
   padding-bottom: 100px;
+
+  .pagination {
+    margin: 40px 0;
+  }
 }
 
 .navbar {
@@ -126,6 +130,6 @@ html, body {
   margin-top: -70px;
   border-top: 1px solid $nav-border-gray;
   padding: 10px 0;
-  height: 70px;
+  min-height: 70px;
 }
 

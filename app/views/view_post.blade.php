@@ -17,6 +17,20 @@
     {{ $post->post_content }}
 
     <hr/>
+
+    <ul class="pager">
+    @if ($previousPost)
+        <li class="previous"><a href="{{ URL::route('blog.post', $previousPost->post_slug) }}">&larr; Previous Post</a></li>
+    @else
+        <li class="previous disabled"><a>&larr; Previous Post</a></li>
+    @endif
+    @if ($nextPost)
+        <li class="next"><a href="{{ URL::route('blog.post', $nextPost->post_slug) }}">Next Post &rarr;</a></li>
+    @else
+        <li class="next disabled"><a>Next Post &rarr;</a></li>
+    @endif
+    </ul>
+
     <h4>
         {{{ $comments->count() }}}
         {{{ \Illuminate\Support\Pluralizer::plural('Comment', $comments->count()) }}}
@@ -36,6 +50,8 @@
     @endforeach
     </section>
     @endif
+
+
 
     @if (Auth::check())
     @include('partials.comment-form')
