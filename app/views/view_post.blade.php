@@ -9,7 +9,11 @@
     <header class="page-header">
         <h1>{{ $post->post_title }}</h1>
         <p class="blog-post-meta">{{{ $post->createdAtFormatted() }}}
-            by {{{ $post->author->username }}}
+            by <strong>{{{ $post->author->username }}}</strong> |
+               <a href="#comments">
+                   {{ $post->comments()->count() }}
+                   {{{ \Illuminate\Support\Pluralizer::plural('Comment', $post->comments()->count()) }}}
+               </a>
         </p>
     </header>
 
@@ -31,13 +35,13 @@
     @endif
     </ul>
 
-    <h4>
+    <h4 id="comments-counter">
         {{{ $comments->count() }}}
         {{{ \Illuminate\Support\Pluralizer::plural('Comment', $comments->count()) }}}
     </h4>
 
     @if ($comments->count())
-    <section class="comments">
+    <section class="comments" id="comments">
     @foreach ($comments as $comment)
         <article class="comment">
             <div class="comment-heading">

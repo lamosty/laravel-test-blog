@@ -11,6 +11,7 @@ body,html{height:100%}
 .navbar .search-form:hover input.search-input{display:block}}
 @media (max-width:767px){.navbar .search-form .btn-default{width:100%}
 .navbar .jump-to-author{display:block}}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover{background-color:#777}
 .navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>li>a{color:#fff}
 .navbar-inverse .navbar-brand:hover,.navbar-inverse .navbar-nav>li>a:hover{color:#777}
 .blog-post .blog-post-title a{text-decoration:inherit;cursor:inherit;color:#333}
@@ -19,6 +20,7 @@ body,html{height:100%}
 .blog-post .excerpt{margin-bottom:10px}
 .blog-post img.alignnone{display:block;margin:20px auto}
 .blog-post .read-more-btn{display:block;width:15%;min-width:113px;margin-top:15px}
+.blog-post #comments-counter{margin-top:60px}
 .blog-post .comments{margin-top:20px}
 .blog-post .comment{margin-bottom:20px}
 .blog-post .comment-content{margin:8px}

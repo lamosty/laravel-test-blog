@@ -7,7 +7,11 @@
                 </a>
             </h2>
             <p class="blog-post-meta">{{{ $post->createdAtFormatted() }}}
-                by {{{ $post->author->username }}}
+                by <strong>{{{ $post->author->username }}}</strong> |
+                <a href="{{ URL::route('blog.post', $post->post_slug) }}/#comments">
+                    {{ $post->comments()->count() }}
+                    {{{ \Illuminate\Support\Pluralizer::plural('Comment', $post->comments()->count()) }}}
+                </a>
             </p>
         </header>
 

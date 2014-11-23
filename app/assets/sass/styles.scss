@@ -65,12 +65,28 @@ html, body {
   }
 }
 
+%hover-bg {
+  background-color: #777;
+}
+
 .navbar-inverse {
-  .navbar-nav>li>a, .navbar-brand {
+  .navbar-nav > li > a, .navbar-brand {
     color: #fff;
 
     &:hover {
       color: #777;
+    }
+  }
+
+  .navbar-nav > .active > a {
+    @extend %hover-bg;
+
+    &:hover {
+      @extend %hover-bg;
+    }
+
+    &:focus {
+      @extend %hover-bg;
     }
   }
 }
@@ -99,6 +115,10 @@ html, body {
     width: 15%;
     min-width: 113px;
     margin-top: 15px;
+  }
+
+  #comments-counter {
+    margin-top: 60px;
   }
 
   .comments {
