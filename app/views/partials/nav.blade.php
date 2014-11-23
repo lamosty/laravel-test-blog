@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -7,7 +7,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ URL::route('blog.home') }}">Lamosty's Laravel Blog</a>
+            <a class="navbar-brand" href="{{ URL::route('blog.home') }}">
+                <img alt="Lamosty's Blog" src="{{ URL::asset('images/logo.png') }}" width="40" height="40">
+                Lamosty's Blog
+            </a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav">

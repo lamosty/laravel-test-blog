@@ -2,6 +2,8 @@ body,html{height:100%}
 .wrapper{min-height:100%}
 #blog-main{padding-bottom:100px}
 #blog-main .pagination{margin:40px 0}
+.navbar{border-radius:0}
+.navbar .navbar-brand{padding:5px 15px}
 .navbar .jump-to-author{display:none}
 @media (min-width:768px) and (max-width:992px){.navbar .search-form{position:relative}
 .navbar .search-form .form-group{display:block;vertical-align:baseline}
@@ -9,6 +11,8 @@ body,html{height:100%}
 .navbar .search-form:hover input.search-input{display:block}}
 @media (max-width:767px){.navbar .search-form .btn-default{width:100%}
 .navbar .jump-to-author{display:block}}
+.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>li>a{color:#fff}
+.navbar-inverse .navbar-brand:hover,.navbar-inverse .navbar-nav>li>a:hover{color:#777}
 .blog-post .blog-post-title a{text-decoration:inherit;cursor:inherit;color:#333}
 .blog-post .blog-post-title a:active,.blog-post .blog-post-title a:focus{outline:0}
 .blog-post .blog-post-title a:hover{color:#747474}

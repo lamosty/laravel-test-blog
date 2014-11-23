@@ -17,6 +17,11 @@ html, body {
 }
 
 .navbar {
+  border-radius: 0;
+
+  .navbar-brand {
+    padding: 5px 15px;
+  }
 
   .jump-to-author {
     display: none;
@@ -56,6 +61,16 @@ html, body {
 
     .jump-to-author {
       display: block;
+    }
+  }
+}
+
+.navbar-inverse {
+  .navbar-nav>li>a, .navbar-brand {
+    color: #fff;
+
+    &:hover {
+      color: #777;
     }
   }
 }
