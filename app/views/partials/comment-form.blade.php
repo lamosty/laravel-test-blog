@@ -2,7 +2,7 @@
     <div class="col-sm-9">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Add New Comment</h3>
+                <h3 class="panel-title" id="comment-form">Add New Comment</h3>
             </div>
             <div class="panel-body">
             {{ Form::open(array('route' => array('blog.post_new_comment', $post->post_slug),

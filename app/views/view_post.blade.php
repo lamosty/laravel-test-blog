@@ -43,7 +43,7 @@
     @if ($comments->count())
     <section class="comments" id="comments">
     @foreach ($comments as $comment)
-        <article class="comment">
+        <article class="comment" id="comment-{{ $comment->id }}">
             <div class="comment-heading">
                 <strong>{{{ $comment->author->username }}}</strong> - {{{ $comment->createdAtFormatted() }}}
             </div>

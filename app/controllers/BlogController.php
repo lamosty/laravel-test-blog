@@ -66,7 +66,7 @@ class BlogController extends BaseController {
         $validator = Validator::make(Input::all(), $validationRules);
 
         if ($validator->fails()) {
-            return Redirect::route('blog.post', array("post_slug" => $post->post_slug))
+            return Redirect::to(URL::route('blog.post', array("post_slug" => $post->post_slug)) . '#comment-form')
                 ->withInput(Input::all())
                 ->withErrors($validator);
         }
@@ -79,7 +79,8 @@ class BlogController extends BaseController {
         $comment->save();
 
         if ($comment->id) {
-            return Redirect::route('blog.post', array("post_slug" => $post->post_slug));
+            return Redirect::to(URL::route('blog.post', array("post_slug" => $post->post_slug)) .
+                "#comment-$comment->id");
         }
     }
 
