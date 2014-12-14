@@ -24,6 +24,7 @@ body,html{height:100%}
 .blog-post .comments{margin-top:20px}
 .blog-post .comment{margin-bottom:20px}
 .blog-post .comment-content{margin:8px}
+.blog-post .back-to-top{margin-top:20px;display:block}
 .blog-sidebar .sidebar-block{margin:20px 0}
 .blog-sidebar .sidebar-block .image-wrapper{display:block;text-align:center}
 .blog-sidebar .sidebar-block.identity h5{text-align:center;margin:20px 0}

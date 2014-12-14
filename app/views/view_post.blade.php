@@ -20,6 +20,8 @@
 
     {{ $post->post_content }}
 
+    <a class="back-to-top" href="#">Back to top</a>
+
     <hr/>
 
     <ul class="pager">
